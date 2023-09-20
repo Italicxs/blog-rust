@@ -16,7 +16,7 @@ async function getProjects() {
     _id,
     "imageUrl" : image.asset->url
   }`;
-  
+
   const data: Data[] = await client.fetch(query);
 
   return data;
@@ -25,6 +25,7 @@ async function getProjects() {
 export const revalidate = 60;
 
 export default async function Projects() {
+    
   const data = await getProjects();
 
   return (
