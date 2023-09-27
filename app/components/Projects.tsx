@@ -37,7 +37,7 @@ export default async function Projects() {
         {data.map((project) => (
           <div key={project._id} className="overflow-hidden bg-white rounded-lg shadow-lg p-4 m-4 max-w-sm">
             <div className="h-64 relative">
-              <Image src={project.imageUrl} alt="Image of the project" fill className="object-cover rounded-sm" />
+              <Image src={project.imageUrl} alt="Image of the project" fill className="object-cover rounded-sm" sizes="(min-width: 1024px) 1024px, (min-width: 768px) 768px, 100vw" />
             </div>
 
             <div className="mt-4">
